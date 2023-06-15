@@ -4,7 +4,7 @@ export default function MyCards() {
       <iframe 
         src="https://ymssx.gitee.io/card/" 
         style={{
-          position: 'fixed',
+          position: "fixed",
           top: 0,
           left: 0,
           bottom: 0,
@@ -12,7 +12,7 @@ export default function MyCards() {
           width: '100%',
           height: '100%',
           border: 'none',
-          zIndex: '-1'
+          zIndex: '2'
         }}></iframe>
     </div>
   );
