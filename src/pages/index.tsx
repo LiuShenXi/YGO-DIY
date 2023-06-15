@@ -5,7 +5,7 @@ const HomePage: React.FC = () => {
   const router = useRouter()
 
   useEffect(() => {
-    router.replace('/my-cards')
+    router.replace('/card-square')
   }, [])
 
   return null
