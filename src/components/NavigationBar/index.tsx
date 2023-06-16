@@ -5,7 +5,7 @@ const NavigationBar = () => {
   const router = useRouter();
   
   return (
-    <div className="navbar bg-neutral text-neutral-content" style={{ zIndex: 999 }}>
+    <div className="navbar bg-neutral text-neutral-content" style={{ zIndex: 999, position: 'relative', float: 'left' }}>
       <div className="navbar-start">
         <Link href="/" className="btn btn-ghost normal-case text-xl">YGO-DIY</Link>
       </div>
@@ -21,7 +21,7 @@ const NavigationBar = () => {
             <Link href="/card-square" className={router.pathname == "/card-square" ? "active" : ""}>卡牌广场</Link>
           </li>
           <li>
-            <Link href="/about" className={router.pathname == "/about" ? "active" : ""}>about</Link>
+            <Link href="/about" className={router.pathname == "/about" ? "active" : ""}>关于</Link>
           </li>
         </ul>
       </div>
