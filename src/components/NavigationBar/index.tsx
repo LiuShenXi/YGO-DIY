@@ -5,7 +5,7 @@ const NavigationBar = () => {
   const router = useRouter();
   
   return (
-    <div className="navbar bg-neutral text-neutral-content" style={{ zIndex: 999, position: 'relative', float: 'left' }}>
+    <div className="navbar bg-neutral text-neutral-content" style={{ zIndex: 3, position: 'relative', float: 'left' }}>
       <div className="navbar-start">
         <Link href="/" className="btn btn-ghost normal-case text-xl">YGO-DIY</Link>
       </div>

@@ -4,14 +4,13 @@
 @tailwind utilities;
 @import './reset.css';
 
-html, body {
-  /* height: 100vh; */
+#__next {
+  height: 100vh;
+  color: #fff;
 }
 
-#__next {
-  /* width: 100vw; */
-  height: 100vh;
-  /* z-index: -2; */
-  /* display: flex; */
-  color: #fff;
+.root-content {
+  width: 100%;
+  height: 100%;
+  background-color: #222;
 }
