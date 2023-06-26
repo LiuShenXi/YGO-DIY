@@ -1,17 +1,17 @@
+.cardWp {
+  display: flex;
+}
+.Waterfall {
+  padding: 2rem 4rem 0 4rem;
+}
+.deckName {
+  width: 100%;
+}
+
 .SkeletonWp {
   width: 210px;
   height: 306.14px;
   // background-color: #fff;
-}
-
-.imageComponent {
-  position: relative;
-}
-
-.imageComponent img {
-  // width: 100%;
-  height: auto;
-  cursor: pointer;
 }
 
 .overlay {
@@ -64,9 +64,4 @@
   object-fit: contain;
 }
 
-.rateText {
-  width: 100%;
-  text-align: center;
-  margin-top: 1rem;
-}
 

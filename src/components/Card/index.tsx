@@ -1,49 +1,26 @@
 import Image from "next/image";
 import card from "./card.png";
 import Skeleton from "@mui/material/Skeleton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./index.module.scss";
 import classnames from 'classnames';
 import CloseIcon from '@mui/icons-material/Close';
 
-const Card = () => {
+const Card = ({ onClick }) => {
   const [show, setShow] = useState(false);
-  const [showOverlay, setShowOverlay] = useState(false);
-  const [showLoading, setShowLoading] = useState(false);
-  const [rating, setRating] = useState('')
-
-  const rateArr = [1,2,3,4,5,6,7,8,9,10]
-
-  const handleImageClick = () => {
-    setShowOverlay(true);
-  };
-
-  const handleCloseOverlay = () => {
-    setShowOverlay(false);
-  };
-
-  const onSubmit = () => {
-    setShowLoading(true)
-    console.log('rating: ', rating)
-  }
-
-  const handleRating = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    console.log('value: ', e.target.value)
-    setRating(e.target.value)
-  }
 
   setTimeout(() => {
     setShow(true);
   }, 2000);
   return (
-    <div >
+    <div style={{ width: 210, margin: '1rem 2rem' }}>
       {show ? (
         <div>
           <Image
             src={card}
             alt="Picture of the author"
             width={210}
-            onClick={handleImageClick}
+            onClick={onClick}
            
             // width={500} automatically provided
             // height={500} automatically provided
@@ -75,32 +52,7 @@ const Card = () => {
         </div>
       )}
 
-      {/* 蒙板 */}
-      {showOverlay && (
-        <div className={styles.overlay}>
-          <CloseIcon className={styles.close} onClick={handleCloseOverlay} />
-          <div className={styles.leftContent}>
-            <Image src={card} alt="Image" className={styles.overlayImage} />
-          </div>
-          <div className={styles.rightContent}>
-            <div>
-              <p className={styles.rate}>评分：9.8</p>
-            </div>
-            <div style={{ color: '#000' }} className={styles.select}>
-              <select className="select w-full max-w-xs" onChange={handleRating}>
-                <option disabled selected>请评分</option>
-                {rateArr.map(item => (
-                  <option>{item}</option>
-                ))}
-              </select>
-            </div>
-            <button className={classnames('btn', 'btn-neutral', styles.submit)} onClick={onSubmit}>
-              {showLoading ? <span className="loading loading-spinner"></span> : null}
-              提交
-            </button>
-          </div>
-        </div>
-      )}
+      <p className={styles.rateText}>评分：9.8</p>
     </div>
   );
 };
