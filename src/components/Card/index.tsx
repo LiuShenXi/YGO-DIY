@@ -4,6 +4,7 @@ import Skeleton from "@mui/material/Skeleton";
 import { useState } from "react";
 import styles from "./index.module.scss";
 import classnames from 'classnames';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Card = () => {
   const [show, setShow] = useState(false);
@@ -18,7 +19,7 @@ const Card = () => {
   };
 
   const handleCloseOverlay = () => {
-    // setShowOverlay(false);
+    setShowOverlay(false);
   };
 
   const onSubmit = () => {
@@ -43,7 +44,7 @@ const Card = () => {
             alt="Picture of the author"
             width={210}
             onClick={handleImageClick}
-            
+           
             // width={500} automatically provided
             // height={500} automatically provided
             // blurDataURL="data:..." automatically provided
@@ -76,7 +77,8 @@ const Card = () => {
 
       {/* 蒙板 */}
       {showOverlay && (
-        <div className={styles.overlay} onClick={handleCloseOverlay}>
+        <div className={styles.overlay}>
+          <CloseIcon className={styles.close} onClick={handleCloseOverlay} />
           <div className={styles.leftContent}>
             <Image src={card} alt="Image" className={styles.overlayImage} />
           </div>

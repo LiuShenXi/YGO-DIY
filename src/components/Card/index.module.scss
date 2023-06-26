@@ -26,6 +26,15 @@
   // align-items: center;
   z-index: 99;
 
+  .close {
+    position: absolute;
+    right: 3rem;
+    top: 2rem;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
   .leftContent {
     width: 70%;
     display: flex;
