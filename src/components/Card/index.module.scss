@@ -3,3 +3,55 @@
   height: 306.14px;
   // background-color: #fff;
 }
+
+.imageComponent {
+  position: relative;
+}
+
+.imageComponent img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  // justify-content: center;
+  // align-items: center;
+  z-index: 99;
+
+  .leftContent {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .rightContent {
+    // flex: 1;
+    .rate {
+      margin-top: 30vh;
+      font-size: 2rem;
+    }
+    .select {
+      width: 15rem;
+      margin-top: 3.5rem;
+    }
+    .submit {
+      margin-top: 3.5rem;
+      width: 6rem;
+    }
+  }
+}
+
+.overlayImage {
+  max-width: 90%;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
