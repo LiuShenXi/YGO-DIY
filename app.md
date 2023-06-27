@@ -20,3 +20,19 @@
   .gitignore # git忽略文件
   package.json # 项目的npm包管理文件
   README.md # 项目描述文件
+
+
+
+ ### now
+
+ /project
+  /src
+    /components
+    /hooks
+    /pages
+    /public
+    /server
+    /shareds
+    /styles
+  
+

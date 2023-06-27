@@ -39,3 +39,11 @@
 - id (UUID): 收藏的唯一标识符。
 - user_id (UUID): 收藏所属的用户的ID，不允许为空，为外键，关联用户表的id。
 - card_id (UUID): 被收藏的卡牌的ID，不允许为空，为外键，关联卡牌表的id。
+
+## 评论表（Comments）
+
+- id (UUID): 评论的唯一标识符。
+- user_id (UUID): 发表评论的用户的ID，不允许为空，为外键，关联用户表的id。
+- card_id (UUID): 被评论的卡牌的ID，不允许为空，为外键，关联卡牌表的id。
+- content (STRING): 评论的内容，不允许为空。
+- timestamp (TIMESTAMP): 评论发表的时间。

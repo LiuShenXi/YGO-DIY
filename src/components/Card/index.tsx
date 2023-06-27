@@ -3,8 +3,6 @@ import card from "./card.png";
 import Skeleton from "@mui/material/Skeleton";
 import { useEffect, useState } from "react";
 import styles from "./index.module.scss";
-import classnames from 'classnames';
-import CloseIcon from '@mui/icons-material/Close';
 
 const Card = ({ onClick }) => {
   const [show, setShow] = useState(false);
